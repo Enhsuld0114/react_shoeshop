@@ -39,7 +39,7 @@ const ProfileScreen = () => {
                     <strong>{userInfo.name}</strong>
                   </h5>
                   <span className="author-card-position">
-                    <>Joined {moment(userInfo.createdAt).format("LL")}</>
+                    <>Бүртгүүлсэн огноо {moment(userInfo.createdAt).format("LL")}</>
                   </span>
                 </div>
               </div>
@@ -74,7 +74,7 @@ const ProfileScreen = () => {
                     aria-controls="v-pills-profile"
                     aria-selected="false"
                   >
-                    Orders List
+                    Захиалгын жагсаалт
                     <span className="badge2">{orders ? orders.length : 0}</span>
                   </button>
                 </div>
