@@ -94,7 +94,7 @@ const Header = () => {
                     <span className="badge">{cartItems.length}</span>
                   </Link>
                 </div>
-                <div className="col-12 d-flex align-items-center">
+                {/* <div className="col-12 d-flex align-items-center">
                   <form onSubmit={submitHandler} className="input-group">
                     <input
                       type="search"
@@ -106,7 +106,7 @@ const Header = () => {
                       search
                     </button>
                   </form>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
