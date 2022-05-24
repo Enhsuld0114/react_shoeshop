@@ -79,28 +79,28 @@ const SingleProduct = ({ history, match }) => {
 
                   <div className="product-count col-lg-7 ">
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Price</h6>
-                      <span>${product.price}</span>
+                      <h6>Үнэ</h6>
+                      <span>{product.price}</span>
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Status</h6>
+                      <h6>Төлөв</h6>
                       {product.countInStock > 0 ? (
-                        <span>In Stock</span>
+                        <span>Бэлэн байгаа</span>
                       ) : (
-                        <span>unavailable</span>
+                        <span>Дууссан</span>
                       )}
                     </div>
-                    <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Reviews</h6>
+                     <div className="flex-box d-flex justify-content-between align-items-center">
+                      <h6>Үнэлгээ</h6>
                       <Rating
                         value={product.rating}
                         text={`${product.numReviews} reviews`}
                       />
-                    </div>
+                    </div> 
                     {product.countInStock > 0 ? (
                       <>
                         <div className="flex-box d-flex justify-content-between align-items-center">
-                          <h6>Quantity</h6>
+                          <h6>Тоо ширхэг</h6>
                           <select
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}
@@ -118,7 +118,7 @@ const SingleProduct = ({ history, match }) => {
                           onClick={AddToCartHandle}
                           className="round-black-btn"
                         >
-                          Add To Cart
+                          Сагсанд хийх
                         </button>
                       </>
                     ) : null}
@@ -130,9 +130,9 @@ const SingleProduct = ({ history, match }) => {
             {/* RATING */}
             <div className="row my-5">
               <div className="col-md-6">
-                <h6 className="mb-3">REVIEWS</h6>
+                <h6 className="mb-3">ҮНЭЛГЭЭ</h6>
                 {product.reviews.length === 0 && (
-                  <Message variant={"alert-info mt-3"}>No Reviews</Message>
+                  <Message variant={"alert-info mt-3"}>Үнэлгээ өгөөгүй байна</Message>
                 )}
                 {product.reviews.map((review) => (
                   <div
@@ -149,7 +149,7 @@ const SingleProduct = ({ history, match }) => {
                 ))}
               </div>
               <div className="col-md-6">
-                <h6>WRITE A CUSTOMER REVIEW</h6>
+                <h6>Сэтгэгдэл бичих</h6>
                 <div className="my-4">
                   {loadingCreateReview && <Loading />}
                   {errorCreateReview && (
@@ -161,22 +161,22 @@ const SingleProduct = ({ history, match }) => {
                 {userInfo ? (
                   <form onSubmit={submitHandler}>
                     <div className="my-4">
-                      <strong>Rating</strong>
+                      <strong>Үнэлгээ</strong>
                       <select
                         value={rating}
                         onChange={(e) => setRating(e.target.value)}
                         className="col-12 bg-light p-3 mt-2 border-0 rounded"
                       >
-                        <option value="">Select...</option>
-                        <option value="1">1 - Poor</option>
-                        <option value="2">2 - Fair</option>
-                        <option value="3">3 - Good</option>
-                        <option value="4">4 - Very Good</option>
-                        <option value="5">5 - Excellent</option>
+                        <option value="">Сонгох...</option>
+                        <option value="1">1 - Муу</option>
+                        <option value="2">2 - Яахав дээ</option>
+                        <option value="3">3 - Дундаж</option>
+                        <option value="4">4 - Сайн</option>
+                        <option value="5">5 - Маш сайн</option>
                       </select>
                     </div>
                     <div className="my-4">
-                      <strong>Comment</strong>
+                      <strong>Сэтгэгдэл</strong>
                       <textarea
                         row="3"
                         value={comment}
@@ -189,18 +189,17 @@ const SingleProduct = ({ history, match }) => {
                         disabled={loadingCreateReview}
                         className="col-12 bg-black border-0 p-3 rounded text-white"
                       >
-                        SUBMIT
+                        ИЛГЭЭХ
                       </button>
                     </div>
                   </form>
                 ) : (
                   <div className="my-3">
                     <Message variant={"alert-warning"}>
-                      Please{" "}
+                      Үнэлгээ өгөхийн тулд{" "}
                       <Link to="/login">
-                        " <strong>Login</strong> "
+                        " <strong>нэвтэрнэ үү</strong> "
                       </Link>{" "}
-                      to write a review{" "}
                     </Message>
                   </div>
                 )}

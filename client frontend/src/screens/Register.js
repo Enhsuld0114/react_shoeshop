@@ -48,21 +48,21 @@ const Register = ({ location, history }) => {
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Имейл оруулах"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Нууц үг"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button type="submit">Register</button>
+          <button type="submit">БҮРТГҮҮЛЭХ</button>
           <p>
             <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
-              I Have Account <strong>Login</strong>
+              Нэвтрэх
             </Link>
           </p>
         </form>

@@ -40,22 +40,22 @@ const Login = ({ location, history }) => {
         >
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Имейл оруулах"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Нууц үг"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Login</button>
+          <button type="submit">НЭВТРЭХ</button>
           <p>
             <Link
               to={redirect ? `/register?redirect=${redirect}` : "/register"}
             >
-              Create Account
+              Бүртгүүлэх
             </Link>
           </p>
         </form>

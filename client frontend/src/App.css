@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Josefin Sans", sans-serif;
+  /* font-family: "open Sans", sans-serif; */
   /* font-family: 'Open Sans', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -58,7 +58,7 @@ textarea:focus {
   padding: 10px 0px 10px 0px;
 }
 .navbar-brand img {
-  width: 60%;
+  width: 20%;
 }
 .input-group {
   height: 50px;

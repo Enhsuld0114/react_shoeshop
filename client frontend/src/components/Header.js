@@ -37,7 +37,7 @@ const Header = () => {
               <div className="row ">
                 <div className="col-6 d-flex align-items-center">
                   <Link className="navbar-brand" to="/">
-                    <img alt="logo" src="/images/logo.png" />
+                    <img alt="logo" src="/images/logo.png" height="100" />
                   </Link>
                 </div>
                 <div className="col-6 d-flex align-items-center justify-content-end Login-Register">
@@ -62,7 +62,7 @@ const Header = () => {
                           to="#"
                           onClick={logoutHandler}
                         >
-                          Logout
+                          Гарах
                         </Link>
                       </div>
                     </div>
@@ -79,11 +79,11 @@ const Header = () => {
                       </button>
                       <div className="dropdown-menu">
                         <Link className="dropdown-item" to="/login">
-                          Login
+                          Нэвтрэх
                         </Link>
 
                         <Link className="dropdown-item" to="/register">
-                          Register
+                          Бүртгүүлэх
                         </Link>
                       </div>
                     </div>
@@ -120,7 +120,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className="col-md-6 col-8 d-flex align-items-center">
-                <form onSubmit={submitHandler} className="input-group">
+                {/* <form onSubmit={submitHandler} className="input-group">
                   <input
                     type="search"
                     className="form-control rounded search"
@@ -130,8 +130,8 @@ const Header = () => {
                   <button type="submit" className="search-button">
                     search
                   </button>
-                </form>
-              </div>
+                </form> */}
+              </div> 
               <div className="col-md-3 d-flex align-items-center justify-content-end Login-Register">
                 {userInfo ? (
                   <div className="btn-group">
@@ -154,14 +154,14 @@ const Header = () => {
                         to="#"
                         onClick={logoutHandler}
                       >
-                        Logout
+                        Гарах
                       </Link>
                     </div>
                   </div>
                 ) : (
                   <>
-                    <Link to="/register">Register</Link>
-                    <Link to="/login">Login</Link>
+                    <Link to="/register">Бүртгүүлэх</Link>
+                    <Link to="/login">Нэвтрэх</Link>
                   </>
                 )}
 
