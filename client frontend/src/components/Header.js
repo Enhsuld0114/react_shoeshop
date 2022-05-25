@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+//import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/Actions/userActions";
 
 const Header = () => {
-  const [keyword, setKeyword] = useState();
+  //const [keyword, setKeyword] = useState();
   const dispatch = useDispatch();
-  let history = useHistory();
+  //let history = useHistory();
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -17,14 +17,14 @@ const Header = () => {
     dispatch(logout());
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    if (keyword.trim()) {
-      history.push(`/search/${keyword}`);
-    } else {
-      history.push("/");
-    }
-  };
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   if (keyword.trim()) {
+  //     history.push(`/search/${keyword}`);
+  //   } else {
+  //     history.push("/");
+  //   }
+  // };
   return (
     <div>
      
@@ -79,11 +79,11 @@ const Header = () => {
                       </button>
                       <div className="dropdown-menu">
                         <Link className="dropdown-item" to="/login">
-                          Нэвтрэх
+                         <strong>Нэвтрэх</strong>
                         </Link>
 
                         <Link className="dropdown-item" to="/register">
-                          Бүртгүүлэх
+                           <strong>Бүртгүүлэх</strong>
                         </Link>
                       </div>
                     </div>

@@ -80,7 +80,7 @@ const SingleProduct = ({ history, match }) => {
                   <div className="product-count col-lg-7 ">
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Үнэ</h6>
-                      <span>{product.price}</span>
+                      <span>{product.price}₮</span>
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Төлөв</h6>
@@ -198,7 +198,7 @@ const SingleProduct = ({ history, match }) => {
                     <Message variant={"alert-warning"}>
                       Үнэлгээ өгөхийн тулд{" "}
                       <Link to="/login">
-                        " <strong>нэвтэрнэ үү</strong> "
+                        <strong>нэвтэрнэ үү</strong> 
                       </Link>{" "}
                     </Message>
                   </div>

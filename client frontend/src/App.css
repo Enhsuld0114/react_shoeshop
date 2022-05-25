@@ -56,6 +56,7 @@ textarea:focus {
 /* Header */
 .header {
   padding: 10px 0px 10px 0px;
+  background-color: #D3E3EE;
 }
 .navbar-brand img {
   width: 20%;
@@ -82,7 +83,7 @@ textarea:focus {
   margin-right: 0rem;
 }
 .badge {
-  background-color: red;
+  background-color: #264961;
   position: absolute;
   top: -20px;
   border-radius: 100px;
@@ -219,17 +220,6 @@ textarea:focus {
 }
 .subscribe-head {
   text-align: center;
-}
-.form-section input[type="email"] {
-  border: 0 none;
-  border-radius: 25px;
-  color: #9b9b9b;
-  font-size: 16px;
-  font-style: normal;
-  height: 51px;
-  letter-spacing: 0;
-  text-align: center;
-  width: 460px;
 }
 .form-section input[type="submit"] {
   background: #264961;
